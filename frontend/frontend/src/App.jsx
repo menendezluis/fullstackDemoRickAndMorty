@@ -12,7 +12,7 @@ function App() {
 
   const getCharacters = async () => {
     const response = await axios.get("http://localhost:3000/api/characters");
-    setCharacters(response.data);
+    setCharacters(response.data.data);
   };
   useEffect(() => {
     getCharacters();
